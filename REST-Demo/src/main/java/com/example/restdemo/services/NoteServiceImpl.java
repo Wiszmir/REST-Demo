@@ -1,11 +1,11 @@
-package services;
+package com.example.restdemo.services;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import domain.Note;
-import reppsitories.NoteRepository;
+import com.example.restdemo.domain.Note;
+import com.example.restdemo.reppsitories.NoteRepository;
 
 @Service
 public class NoteServiceImpl implements NoteService {
@@ -26,4 +26,8 @@ public class NoteServiceImpl implements NoteService {
 		return noteRepository.findAll();
 	}
 
+	@Override
+	public Note saveNote(Note note) {
+		return noteRepository.save(note) ;
+	}
 }

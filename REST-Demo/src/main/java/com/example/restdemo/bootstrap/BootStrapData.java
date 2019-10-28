@@ -1,10 +1,10 @@
-package bootstrap;
+package com.example.restdemo.bootstrap;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import domain.Note;
-import reppsitories.NoteRepository;
+import com.example.restdemo.domain.Note;
+import com.example.restdemo.reppsitories.NoteRepository;
 
 @Component
 public class BootStrapData implements CommandLineRunner {
@@ -34,7 +34,7 @@ public class BootStrapData implements CommandLineRunner {
 		n3.setMessage("Thrid message");
 		noteRepository.save(n3);
 		
-		System.out.println("Preloading Complete /n Notes loaded: " + noteRepository.count());
+		System.out.println("Preloading Complete \n Notes loaded: " + noteRepository.count());
 		
 	}
 
