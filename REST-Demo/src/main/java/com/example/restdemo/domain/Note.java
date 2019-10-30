@@ -1,22 +1,32 @@
 package com.example.restdemo.domain;
 
+import java.sql.Timestamp;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.CreationTimestamp;
+
+import lombok.Data;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
 
-import lombok.Data;
 
 @Data
 @Entity
+@Table(name = "notes")
 public class Note {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY )
 	private Long id;
 	private String title;
-	private String message;
+	private String body;
+	@CreationTimestamp
+	private Timestamp created;
 	
 	public String getTitle() {
 		return title;
@@ -25,10 +35,10 @@ public class Note {
 		this.title = title;
 	}
 	public String getMessage() {
-		return message;
+		return body;
 	}
 	public void setMessage(String message) {
-		this.message = message;
+		this.body = message;
 	}
 	
 	
