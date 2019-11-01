@@ -1,4 +1,4 @@
-/*package com.example.restdemo.bootstrap;
+package com.example.restdemo.bootstrap;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -38,4 +38,4 @@ public class BootStrapData implements CommandLineRunner {
 		
 	}
 
-}*/
+}
