@@ -6,6 +6,8 @@ import com.example.restdemo.domain.Note;
 
 public interface NoteService {
 	
+	//Proxy interface
+	
 	Note findNoteById(Long id);
 	
 	List<Note> findAllNotes();

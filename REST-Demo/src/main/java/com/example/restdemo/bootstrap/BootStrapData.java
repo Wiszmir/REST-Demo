@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 import com.example.restdemo.domain.Note;
 import com.example.restdemo.reppsitories.NoteRepository;
 
+//class for testing. Preloading data to DB. 
 @Component
 public class BootStrapData implements CommandLineRunner {
 

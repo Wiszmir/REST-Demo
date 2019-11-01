@@ -7,8 +7,11 @@ import org.springframework.stereotype.Service;
 import com.example.restdemo.domain.Note;
 import com.example.restdemo.reppsitories.NoteRepository;
 
+
 @Service
 public class NoteServiceImpl implements NoteService {
+	
+	//Implementation of proxy interface
 	
 	private final NoteRepository noteRepository; 
 	

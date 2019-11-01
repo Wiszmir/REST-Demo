@@ -14,11 +14,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
 
-
 @Data
 @Entity
 @Table(name = "notes")
-public class Note {
+public class Note { //Class with data handling
+	
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY )

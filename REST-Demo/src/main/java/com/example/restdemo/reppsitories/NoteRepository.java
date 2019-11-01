@@ -5,6 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.example.restdemo.domain.Note;
 
 public interface NoteRepository extends JpaRepository<Note, Long> {
-	
-
+	//Interface to handle DB operations
 }

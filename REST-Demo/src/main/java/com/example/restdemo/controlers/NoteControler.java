@@ -16,27 +16,28 @@ import com.example.restdemo.services.NoteService;
 
 @RestController
 @RequestMapping(NoteControler.BASE_URL)
-public class NoteControler {
-
+public class NoteControler { //class with REST mapping
 	public static final String BASE_URL = "/api/v1/notes";
 	
 	public final NoteService noteService;
 	
 	public NoteControler(NoteService noteService) {
-		this.noteService = noteService;
-		
+		this.noteService = noteService;	
 	}
 	
+	//GET
 	@GetMapping
 	List<Note> getAllNotes() {
 		return noteService.findAllNotes();
-	} 
+	}
 	
+	//GET with specified id
 	@GetMapping("/{id}")
 	public Note getNoteById(@PathVariable Long id) {
 		return noteService.findNoteById(id);
 	}
 	
+	//POST
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	public Note saveNote(@RequestBody Note note) {
